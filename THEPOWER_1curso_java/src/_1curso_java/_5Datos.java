@@ -48,6 +48,8 @@ public class _5Datos {
         float numeroFloat = entrada.nextFloat();
 
 
+        System.out.print("hola Juancarlos que edad tienes?");
+        int edadJuancarlos = entrada.nextInt();
 
         // Mostramos los datos ingresados por el usuario
         System.out.println("El número entero ingresado es: " + numeroUsuario);
