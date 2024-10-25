@@ -17,7 +17,7 @@ public class CalculadoraIMC {
     public static void main(String[] args) {
         
         //Scanner scanner = new Scanner(System.in).useLocale(Locale.US);
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in).useLocale(locale.US);
 
         System.out.print("Introduce tu peso en kg: ");
         double peso = scanner.nextDouble();
