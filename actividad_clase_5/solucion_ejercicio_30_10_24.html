@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+<head>
+  <title>ENCUESTA DE PELICULAS</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device=-wiidth, initial-scale=1.0">
+</head>
+
+<body>
+  <h1>Encuesta de peliculas</h1>
+  <form>
+    <fieldset>
+      <legend>INFORMACIÓN PERSONAL:</legend>
+      <label for="nombre">Escribe tu nombre completo</label>
+      <input type="text" id="nombre" name="nombre" required><br><br>
+
+      <label for="email">Proporciona un correo electronico valido</label>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <label for=edad">Indica tu edad (debes tener al menos 18 años)</label>
+      <input type="number" id="edad" name="edad" min="18" required><br><br>
+
+      <label for="Sexo">Selecciona tu sexo</label>
+      <select id="sexo" name="sexo" required>
+        <option value="masculino">Masculino</option>
+        <option value="femenino">Femenino</option>
+        <option value="otro">Otro</option>
+      </select><br><br>
+
+      <label for="estadoCivil">Indica tu estado civil</label>
+      <select id="estadoCivil" name="estadoCivil" required>
+        <option value="soltero">Soltero</option>
+        <option value="casado">Casado</option>
+        <option value="divorciado">Divorciado</option>
+      </select><br><br>
+
+      <label for="fechaNacimiento">Proporciona tu fecha de nacimiento</label>
+      <input type="date" id="fechaNacimiento" name="fechaNacimiento" required><br><br>
+
+      <label for="cargaArchivo">Si deseas, puedes cargar un archivo(por ejemplo, una imagen</label>
+      <input type="file" id="cargaArchivo" name="cargaArchivo" required><br><br>
+    </fieldset>
+    <fieldset>
+      <legend>PREFERENCIAS DE PELÍCULAS</legend>
+      <label for="genero">Género favorito:</label>
+      <select id="genero" name="genero">
+        <option value="accion">Acción</option>
+        <option value="comedia">Comedia</option>
+        <option value="drama">Drama</option>
+        <option value="terror">Terror</option>
+      </select><br><br>
+      <label for="3d">¿Te gustan las películas 3D?</label>
+      <input type="radio" id="si" name="3d" value="si" required>
+      <label for="3d">SI</label>
+      <input type="radio" id="no" nome="3d" value="no" required>
+      <label for="3d">NO</label><br><br>
+      <label for="comentarios">Comentarios:</label>
+      <p>Escribe cualquier comentario adicional que tengas sobre tus gustos cinematográficos</p><br>
+      <textarea rows="5" cols="50" id="comentarios" required></textarea>
+
+    </fieldset>
+  </form>
+  <div>
+    <h2>Trailer ultimo estreno en cines</h2>
+    <video width="400" height="auto" controls>
+      <source src="imagen/236893_small.mp4" type="video/mp4">
+    </video>
+    <h2>Cartel</h2>
+    <img src="imagen/copyright-6114655_1280.jpg" alt="portada estreno" width="400" height="auto">
+  </div>
+</body>
+
+</html>

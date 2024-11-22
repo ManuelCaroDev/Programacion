@@ -1,0 +1,28 @@
+
+package javaapplication1;
+import java.util.Scanner;
+
+public class Main {
+    
+    public static void main(String[] args){
+
+    
+        /*    
+        crea un programa el cual pidas el valor de dos variables e intercambia 
+        sus valores, es decir; a = 5, b = 10 -> a = 10, b = 5
+        */
+        
+        int a = 5;
+        int b =10;
+        int aux;
+        //donde lo voy a guardar = el que voy a guardar;
+        aux = a; //aux = 5
+        a = b; // a = 10
+        b = aux;
+        
+
+        System.out.println(a);
+        System.out.println(b);
+    }
+}
+        

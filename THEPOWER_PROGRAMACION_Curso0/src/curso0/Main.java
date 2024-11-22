@@ -36,7 +36,7 @@ public class Main {
         /* Una constante -> Un dato que no puede ser modificado (para declarar unaconstate lo hacemos con ->final<-- 
         y tine que tener el nombre todo en mayusculas: final int CONST = 5;)*/
         
-        final float PI =3.14f;
+        final float PI =3.14f; //constante siempre en mayusculas
         
         //Operadores +,-,*,/,%
         

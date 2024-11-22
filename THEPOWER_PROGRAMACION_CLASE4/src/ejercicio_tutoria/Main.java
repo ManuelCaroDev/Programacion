@@ -1,5 +1,6 @@
 package ejercicio_tutoria;
 
+//import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {
@@ -23,65 +24,76 @@ public class Main {
                 System.out.println("Cerrando sesión");
                 break;
             }
+
             if (calificacion >= 0 && calificacion <= 10) {
                 contadorPositivo++;
                 sumaPositivo += calificacion;
+
                 if (calificacion >= notaMaxima) {
                     notaMaxima = calificacion;
                 }
+
                 if (calificacion <= notaMinima) {
                     notaMinima = calificacion;
                 }
+
             }
+
             if (calificacion < 0 && calificacion >= -10) {
                 contadorNegativo++;
                 sumaNegativo += calificacion;
+
                 if (calificacion >= notaMaxima) {
                     notaMaxima = calificacion;
                 }
+
                 if (calificacion <= notaMinima) {
                     notaMinima = calificacion;
                 }
             }
 
             if (calificacion == -10 && contador >= 1) {
-
                 break;
             }
-            if (calificacion > 10 || calificacion < -9) {
+
+            if (calificacion > 10 && calificacion < -9) {
                 System.out.println("Calificacion incorrecta, introduzca una nota correcta!");
                 contador--;
 
             }
-
-            contador++;
+        }
+        contador++;
 
             if (contador == 5) {
                 System.out.println("Ya se han ingresado 5 calificaciones");
             }
-        }
+        
 
         float notaMedia = (sumaPositivo + sumaNegativo) / contador;
-        float notaMediaPositivos = sumaPositivo / contadorPositivo;
-        float notaMediaNegativos = sumaNegativo / contadorNegativo;
+        float notaMediaPositiva = sumaPositivo / contadorPositivo;
+        float notaMediaNegativa = sumaNegativo / contadorNegativo;
 
         if (contador > 0) {
-            System.out.println("Su nota media es: " + notaMedia);
-            System.out.println("Su nota mas alta es: " + notaMaxima);
-            System.out.println("Su nota mas baja es: " + notaMinima);
+            System.out.println("Su nota media es:" + notaMedia);
+            System.out.println("Su nota mas alta es:" + notaMaxima);
+            System.out.println("Su nota mas baja es:" + notaMinima);
+
             if (contadorPositivo == 0) {
-                System.out.println("No hay calificaciones Positivas");
+                System.out.println("No tiene notas positivas");
+
             } else {
-                System.out.println("Su nota media positivos es: " + notaMediaPositivos);
-                System.out.println("Su numero de notas positivas es: " + contadorPositivo);
+                System.out.println("Su nota media positiva es:" + notaMediaPositiva);
+                System.out.println("Su numero de calificaciones positivas es:" + contadorPositivo);
             }
 
             if (contadorNegativo == 0) {
-                System.out.println("No hay calificaciones Negativas");
+                System.out.println("No tiene notas negativas");
+
             } else {
-                System.out.println("Su nota media negativos es: " + notaMediaNegativos);
-                System.out.println("Su numero de notas negativas es: " + contadorNegativo);
+                System.out.println("Su nota media negativa es:" + notaMediaNegativa);
+                System.out.println("Su numero de calificaciones negativas es:" + contadorNegativo);
             }
+
         }
 
     }
